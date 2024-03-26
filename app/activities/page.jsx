@@ -52,6 +52,10 @@ const page = () => {
                 Scroll down
             </motion.div>
 
+            <div className='w-full flex justify-center absolute z-[2] top-[30%]'>
+                <h1 className="text-[8vw] sm:text-[3vw] font-semibold">Activities</h1>
+            </div>
+
             <Booking />
             <Page1_act />
 

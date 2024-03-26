@@ -141,9 +141,9 @@ const page = () => {
 
 
       {/* Soups */}
-      <div className="w-full pt-32 flex flex-col px-16 border-b-[1px] border-zinc-200 pb-32">
+      <div className="w-full py-32 flex flex-col px-36 border-b-[1px] border-zinc-200">
 
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex px-16 flex-col items-center gap-6">
           <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>SOUP</h1>
 
           <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
@@ -159,7 +159,7 @@ const page = () => {
       </div>
 
       {/* SALADS */}
-      <div className="w-full pt-32 flex flex-col px-16 border-b-[1px] border-zinc-200 pb-32">
+      <div className="w-full px-52 py-32 flex flex-col border-b-[1px] border-zinc-200">
 
         <div className="flex flex-col items-center gap-6">
           <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>SALADS</h1>
@@ -177,7 +177,7 @@ const page = () => {
       </div>
 
       {/* PASTA & PIZZA */}
-      <div className="w-full pt-32 flex flex-col px-16">
+      <div className="w-full pt-32 flex flex-col px-52">
 
         <div className="flex flex-col items-center gap-6">
           <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>PASTA & PIZZA</h1>
@@ -200,7 +200,7 @@ const page = () => {
       </div>
 
       {/* STARTERS */}
-      <div className="w-full flex flex-col px-16 border-b-[1px] border-zinc-200 pb-32">
+      <div className="w-full flex flex-col px-52 border-b-[1px] border-zinc-200 pb-32">
 
         <div className="flex flex-col items-center gap-6">
           <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>STARTERS</h1>
@@ -218,7 +218,7 @@ const page = () => {
       </div>
 
       {/* MAINS */}
-      <div className="w-full pt-32 flex flex-col px-16">
+      <div className="w-full pt-32 flex flex-col px-52">
 
         <div className="flex flex-col items-center gap-6">
           <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>MAINS</h1>
@@ -241,12 +241,12 @@ const page = () => {
       </div>
 
       {/* STAPLES & ACCOMPANIMENTS */}
-      <div className="w-full pt-32 flex flex-col px-16 border-b-[1px] border-zinc-200 pb-32">
+      <div className="w-full py-32 flex flex-col px-16 border-b-[1px] border-zinc-200">
 
         <div className="flex flex-col items-center gap-6">
           <h1 className={`text-[4.5] sm:text-[5.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>STAPLES & ACCOMPANIMENTS</h1>
 
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+          <div className={`w-full flex flex-col px-36 gap-6 items-start ${roboto.className}`}>
 
             {food6Data.map((item, index) => {
               return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
@@ -264,7 +264,7 @@ const page = () => {
         <div className="flex flex-col items-center gap-6">
           <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>DESSERT</h1>
 
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+          <div className={`w-full flex flex-col px-36 gap-6 items-start ${roboto.className}`}>
 
             {food7Data.map((item, index) => {
               return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
@@ -287,7 +287,7 @@ const page = () => {
         <div className="flex flex-col items-center gap-6">
           <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>BEVERAGE</h1>
 
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+          <div className={`w-full flex flex-col px-36 gap-6 items-start ${roboto.className}`}>
 
             {food8Data.map((item, index) => {
               return <Food key={item.id} name={item.name} price={item.price} info={item.info} />

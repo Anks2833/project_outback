@@ -1,33 +1,20 @@
 "use client"
 
-import { Inter, Roboto } from 'next/font/google';
-
-import { motion } from "framer-motion"
-import Booking from "../Components/Booking"
+import { motion } from "framer-motion";
 import Footer from "../Components/Footer"
 import Page1_act from "../Components/Page1_act"
 import LocomotiveScroll from 'locomotive-scroll';
-import { useEffect, useRef } from "react"
+import { Lato } from 'next/font/google';
 
-const roboto = Roboto({ subsets: ['latin'], weight: ["100", "300", "400", "500", "700", "900"] });
+const lato = Lato({
+    subsets: ['latin'],
+    weight: ['900'],
+})
 
 
 const page = () => {
 
     const locomotiveScroll = new LocomotiveScroll();
-
-    // const scrollRef = useRef(null);
-
-
-    // useEffect(() => {
-    //     const locoScroll = new LocomotiveScroll({
-    //         el: scrollRef.current,
-    //     });
-    //     return () => {
-    //         locoScroll.destroy();
-    //     };
-    // }, []);
-
 
     return (
 
@@ -40,7 +27,8 @@ const page = () => {
 
             </div>
 
-            <motion.div
+            {/* The scroll down text */}
+            {/* <motion.div
                 // ref={scrollRef}
                 // data-scroll
                 // data-scroll-speed="-.5"
@@ -50,13 +38,24 @@ const page = () => {
 
                 className="absolute bottom-5 z-[10] w-full hidden sm:flex sm:justify-center text-white text-sm">
                 Scroll down
+            </motion.div> */}
+
+            {/* THE ACTIVITIES TEXT */}
+            <motion.div className="w-full flex justify-center absolute z-[2] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] overflow-hidden">
+                <motion.div
+                    initial={{ y: "50%", rotate: "40deg" }}
+                    whileInView={{ y: 0, rotate: "0" }}
+                    transition={{ ease: [0, 0.55, 0.45, 1], duration: 1, }}
+                    className='flex text-[8vw] sm:text-[8vw] font-extrabold text-white origin-left'
+                >
+                    <h1
+                        initial={{ y: "80%", opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.25 }}
+                        className={`text-[12vw] sm:text-[6vw] font-extrabold text-white ${lato.className}`}>ACTIVITIES</h1>
+                </motion.div>
             </motion.div>
 
-            <div className='w-full flex justify-center absolute z-[2] top-[30%]'>
-                <h1 className="text-[8vw] sm:text-[3vw] font-semibold">Activities</h1>
-            </div>
-
-            <Booking />
             <Page1_act />
 
             <Footer />

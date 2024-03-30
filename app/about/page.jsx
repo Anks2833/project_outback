@@ -1,10 +1,25 @@
-import Booking from "../Components/Booking";
-import Footer from "../Components/Footer";
+"use client"
 
-// `app/dashboard/page.js` is the UI for the `/dashboard` URL
+
+import { motion } from "framer-motion";
+import Footer from "../Components/Footer";
+import LocomotiveScroll from 'locomotive-scroll';
+import { Lato } from 'next/font/google';
+
+const lato = Lato({
+    subsets: ['latin'],
+    weight: ['900'],
+})
+
+
 export default function About() {
+
+  const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <>
+
+      {/* Top section */}
       <div className="relative w-full h-screen">
         <img
           className="w-full h-full object-cover brightness-75"
@@ -14,78 +29,196 @@ export default function About() {
         <div className="absolute top-0 w-full h-screen bg-zinc-900/65"></div>
       </div>
 
-      <div className='w-full flex justify-center absolute z-[2] top-[30%]'>
-        <h1 className="text-[8vw] sm:text-[3vw] font-extrabold text-white">About</h1>
-      </div>
+      {/* About text */}
+      <motion.div className='w-full flex justify-center absolute z-[2] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] overflow-hidden'>
+        <motion.div
+          initial={{ y: "50%", rotate: "40deg" }}
+          whileInView={{ y: 0, rotate: "0" }}
+          transition={{ ease: [0, 0.55, 0.45, 1], duration: 1, }}
+          className={`flex text-[16vw] sm:text-[8vw] font-extrabold text-white origin-left ${lato.className}`}
+        >
+          <h1
+          >
+            ABOUT
+          </h1>
 
-      <Booking />
+        </motion.div>
+      </motion.div>
 
-      <div className="flex justify-evenly items-center gap-36 p-20 bg-gray-50">
-        <div className="basis-1/2 ">
-          <h2 className="text-2xl font-semibold pb-5">Our Story</h2>
-          <p>
-            Overlooking the luscious green tropical trees, with pristine clear
-            beach & clear blue waters a minute away, our resort, Outback Resorts
-            has created its own niche. The picturesque jungle side view and
-            proximity to the ocean give a sense of belonging to the place. The
-            interiors have a more contemporary outlook which depicts the
-            transient dynamics between the sky, land and the ocean. The
-            highlight of the property is in our recycled plastic installations,
-            crossing 200,000 in numbers.
-          </p>
-        </div>
-
-        <div className="basis-2/3">
-          <img src="pexels-aviv.jpg" alt="" />
-        </div>
-      </div>
-
-      <div className="m-20  grid grid-cols-3 auto-rows-[300px]">
+      {/* Our story */}
+      <div
+        className="flex sm:flex sm:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left"
+      >
         <div
-          className="bg-cover col-span-2 bg-center"
-          style={{ backgroundImage: `url('./Grid/pexels1.jpg')` }}
-        ></div>
-        <div
-          className="bg-cover"
-          style={{ backgroundImage: `url('./Grid/pexels3.jpg')` }}
-        ></div>
+          initial={{ y: "50%", opacity: 0 }}
+          whileInView={{ y: "0", opacity: 1 }}
+          viewport={{ once: true }}
+          className="w-full text-black flex flex-col gap-6"
+        >
+          <div className='w-full flex px-8 sm:px-0'>
+            <h2
+              className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] sm:border-b-[1px] sm:border-b-zinc-500"
+              initial={{ y: "30%", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
+            >
+              Our Story
+            </h2>
+          </div>
 
-        <div
-          className="bg-cover row-span-2 bg-bottom"
-          style={{ backgroundImage: `url('./Grid/pexels5.jpg')` }}
-        ></div>
+          {/* Image on mobile */}
+          <div className="w-full flex sm:hidden">
+            <img src="pexels-aviv.jpg" alt="noimg" />
+          </div>
 
-        <div
-          className="bg-cover bg-center"
-          style={{ backgroundImage: `url('./Grid/pexels7.jpg')` }}
-        ></div>
-        <div
-          className="bg-cover row-span-2 bg-center"
-          style={{ backgroundImage: `url('./Grid/pexels4.jpg')` }}
-        ></div>
-        <div
-          className="bg-cover bg-bottom"
-          style={{ backgroundImage: `url('./Grid/pexels8.jpg')` }}
-        ></div>
-      </div>
+          <div className='w-full flex gap-10'>
+            <div className='w-full sm:w-1/2 px-8 sm:px-0 flex flex-col'>
+              <p>Overlooking the luscious green tropical trees, with pristine clear beach & clear blue waters a minute away, our resort, Outback Resorts has created its own niche. The picturesque jungle side view and proximity to the ocean give a sense of belonging to the place. The interiors have a more contemporary outlook which depicts the transient dynamics between the sky, land and the ocean. The highlight of the property is in our recycled plastic installations, crossing 200,000 in numbers.</p>
 
-      <div className="flex justify-evenly items-center gap-36 p-20  bg-gray-50">
-        <div>
-          <img src="asset 23.webp" alt="" />
-        </div>
-        <div className="basis-1/2">
-          <h2 className="text-2xl font-semibold pb-5">
-            400,000 Recycled Installations
-          </h2>
-          <p>
-            We aim to give our visitors some of the most amazing experiences of
-            a lifetime that will remain imbibed in their memories for ages. We
-            are here to create everlasting impressions and be a part of your
-            journey. A journey to unfold the hidden mysteries of the Havelock
-            and enjoy what it has to offer to the fullest!
-          </p>
+              {/* The book now button */}
+              <div>
+                <motion.button
+                  whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
+                  whileTap={{scale: 0.9}}
+                  className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
+                >
+                  Book now
+                </motion.button>
+              </div>
+            </div>
+
+            <div className="w-1/2 h-[55vh] hidden sm:flex">
+              <img className='w-full h-full object-cover origin-center' src="pexels-aviv.jpg" alt="noimg" />
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Gallery */}
+      <div className='w-full relative flex items-center gap-3 overflow-hidden bg-[#FAF8F3] text-center sm:text-left'>
+
+        <div className='w-full'>
+          <h1 className='w-full absolute top-0 left-0 z-[1] px-12 text-[#4c4e50] text-[8vw] sm:text-[6vw] font-bold'>Our Gallery</h1>
+        </div>
+
+        <motion.div
+          className="flex items-end gap-2 sm:gap-3 py-12 sm:py-32"
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{ ease: "linear", duration: 50, repeat: Infinity }}
+        >
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img
+              className='w-full h-full' src="/out1.webp" alt="noimg"
+            />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out2.webp" alt="noimg" />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out3.webp" alt="noimg" />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out-4.webp" alt="noimg" />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out5.webp" alt="noimg" />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out6.webp" alt="noimg" />
+          </div>
+        </motion.div>
+
+
+        <motion.div
+          className="flex items-end gap-2 sm:gap-3 py-12 sm:py-32"
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{ ease: "linear", duration: 50, repeat: Infinity }}
+        >
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img
+              className='w-full h-full' src="/out1.webp" alt="noimg"
+            />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out2.webp" alt="noimg" />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out3.webp" alt="noimg" />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out-4.webp" alt="noimg" />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out5.webp" alt="noimg" />
+          </div>
+
+          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+            <img className='w-full h-full' src="/out6.webp" alt="noimg" />
+          </div>
+        </motion.div>
+      </div>
+
+      {/* recycle */}
+      <motion.div className="flex sm:flex sm:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left">
+        <motion.div
+          initial={{ y: "50%", opacity: 0 }}
+          whileInView={{ y: "0", opacity: 1 }}
+          transition={{ ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="w-full text-black flex flex-col gap-6"
+        >
+
+          <div className='w-full flex px-8 sm:px-0 border-b-[1px] border-b-zinc-500'>
+            <h2
+              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A]"
+              initial={{ y: "30%", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
+            >
+              400,000 Recycled Installations
+            </h2>
+          </div>
+
+          {/* Image on mobile */}
+          <div className="w-full flex sm:hidden">
+            <img src="/out5.webp" alt="noimg" />
+          </div>
+
+          <div className='w-full flex flex-row-reverse gap-10'>
+            <div className='w-full sm:w-1/2 px-8 sm:px-0 flex flex-col'>
+              <p>We aim to give our visitors some of the most amazing experiences of a lifetime that will remain imbibed in their memories for ages. We are here to create everlasting impressions and be a part of your journey. A journey to unfold the hidden mysteries of the Havelock and enjoy what it has to offer to the fullest!</p>
+
+              {/* The book now button */}
+              <div>
+                <motion.button
+                  whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
+                  whileTap={{scale: 0.9}}
+                  className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
+                >
+                  Book now
+                </motion.button>
+              </div>
+            </div>
+
+            <div className="w-1/2 h-[55vh] hidden sm:flex">
+              <img className='w-full h-full object-cover origin-center' src="asset 23.webp" alt="noimg" />
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
 
       <Footer />
     </>

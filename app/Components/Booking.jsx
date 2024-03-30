@@ -1,13 +1,20 @@
 "use client"
 
+import { motion } from 'framer-motion';
 import { Roboto } from 'next/font/google';
 
-const roboto = Roboto({ subsets: ['latin'], weight: "500"});
+const roboto = Roboto({ subsets: ['latin'], weight: "500" });
 
 const Booking = () => {
     return (
 
-        <div className="absolute z-[3] top-[55%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full flex flex-col justify-center items-center gap-5">
+        <motion.div
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{delay: 0.6}}
+            viewport={{once: true}}
+            className="absolute z-[3] top-[55%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full flex flex-col justify-center items-center gap-5"
+        >
 
             {/* Booking section for pc */}
             <div className="w-[55vw] h-[25vh] bg-white p-4 hidden sm:flex sm:justify-center rounded-2xl">
@@ -32,8 +39,14 @@ const Booking = () => {
                         <input className="w-[8vw] outline-none" type="text" />
                     </div>
 
+                    {/* Book now button */}
                     <div>
-                        <button className="bg-emerald-400 p-5 rounded-lg text-white font-semibold">Book now</button>
+                        <motion.button
+                            whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
+                            className="bg-transparent border-[1px] border-emerald-600 p-5 rounded-lg text-emerald-600 font-semibold"
+                        >
+                            Book now
+                        </motion.button>
                     </div>
 
                 </div>
@@ -71,8 +84,11 @@ const Booking = () => {
 
             </div>
 
-        </div>
+        </motion.div>
 
     )
 }
 export default Booking
+
+
+

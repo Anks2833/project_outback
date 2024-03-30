@@ -14,7 +14,12 @@ const Wp_icon = () => {
 
     return (
 
-        <div className="fixed z-[10] bottom-2 left-2 sm:bottom-5 sm:left-5 flex items-center text-white">
+        <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{delay: 1.2}}
+            className="fixed z-[10] bottom-2 left-2 sm:bottom-5 sm:left-5 flex items-center text-white"
+        >
 
             <Link href={"https://api.whatsapp.com/send/?phone=919531949235&text&type=phone_number&app_absent=0"} target="__blank">
                 <motion.img
@@ -28,7 +33,7 @@ const Wp_icon = () => {
             </Link>
             <h1 className={`bg-[#25D366] h-[2vw] ${visibility ? "opacity-100" : "opacity-0"} px-3 rounded-tr-xl rounded-br-xl hidden sm:flex items-center transition-all`}>WhatsApp us</h1>
 
-        </div>
+        </motion.div>
 
     )
 }

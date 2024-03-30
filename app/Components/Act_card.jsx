@@ -1,40 +1,47 @@
 "use client"
 
+
 const Act_card = () => {
     return (
 
         <div className="w-full sm:w-full flex justify-center">
 
             {/* For desktop */}
-            <div className="w-full hidden sm:flex mt-10 border-b-[1px] border-zinc-200 pb-20">
+            <div className="hidden sm:flex px-32 my-20">
+                <div className="w-full text-black flex flex-col gap-6">
+                    <h2
+                        className="w-full text-[3.5vw] sm:text-[3vw] font-extrabold text-[#53565A] border-b-[1px] border-b-zinc-500"
+                        initial={{ y: "30%", opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
+                    >
+                        Try Scuba Dive
+                    </h2>
 
-                <div className="w-1/2 mt-10 py-8 text-black flex flex-col gap-6">
-                    <h1 className="text-[2vw] font-extrabold text-[#53565A]">Try Scuba Dive</h1>
-                    <div className="paras font-light text-[1vw]">
-                        <p>This is a gentle experience designed for swimmers and non swimmers alike.</p>
-                        <p>The try dive consists of briefing, shallow water scuba training and 30 minute</p>
-                        <p>dive. Underwater photos and videos are especially taken for you underwater</p>
-                        <p>by a professional. All equipment and dive site transfers are included in the</p>
-                        <p>price. No hidden charges. Maximum depth for a try dive is 12 meters.</p>
+                    {/* Image on mobile */}
+                    <div className="w-full flex sm:hidden">
+                        <img src="img1.jpg" alt="noimg" />
                     </div>
 
-                    <div className="flex gap-1">
-                        <h1 className="font-semibold text-emerald-600">Activity Duration:</h1>
-                        <h1>3 hours</h1>
+                    <div className='w-full flex gap-10'>
+                        <div className='w-1/2 flex flex-col gap-6'>
+                            <p>This is a gentle experience designed for swimmers and non swimmers alike. The try dive consists of briefing, shallow water scuba training and 30 minute dive. Underwater photos and videos are especially taken for you underwater by a professional. All equipment and dive site transfers are included in the price. No hidden charges. Maximum depth for a try dive is 12 meters.</p>
+
+                            <h1>Activity Duration: 3 hours</h1>
+
+                            <button className="w-[8vw] mt-10 p-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
+                        </div>
+
+                        <div className="w-1/2 h-[55vh] hidden sm:flex">
+                            <img className='w-full h-full object-cover origin-center' src="img1.jpg" alt="noimg" />
+                        </div>
                     </div>
-                    <button className="w-[8vw] mt-10 mb-16 p-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
                 </div>
-
-                <div className="w-1/2 mt-10">
-
-                    <img className="w-full h-full object-cover" src="https://outbackresorts.in/wp-content/uploads/2020/10/Outback-Resorts-Activities-3.jpg" alt="" />
-
-                </div>
-
             </div>
 
             {/* For mobile */}
-            <div className="w-[90vw] mt-10 py-8 text-black flex flex-col items-center border-b-[1px] border-zinc-200 sm:hidden">
+            <div className="w-full mt-10 py-8 text-black flex flex-col items-center border-b-[1px] border-zinc-200 sm:hidden">
 
                 {/* The heading */}
                 <h1 className="w-[70vw] text-[8vw] text-center font-extrabold text-[#53565A]">Try Scuba Dive</h1>
@@ -45,7 +52,7 @@ const Act_card = () => {
                 </div>
 
                 {/* The para */}
-                <div className="w-full flex flex-wrap justify-center paras font-light text-[3vw] py-3">
+                <div className="w-full flex flex-wrap justify-center text-center font-light text-[4vw] px-8 py-3">
                     <p>This is a gentle experience designed for swimmers and non swimmers alike. The try dive consists of briefing, shallow water scuba training and 30 minute dive. Underwater photos and videos are especially taken for you underwater by a professional. All equipment and dive site transfers are included in the price. No hidden charges. Maximum depth for a try dive is 12 meters.</p>
                 </div>
 
@@ -54,9 +61,13 @@ const Act_card = () => {
                     <h1 className="font-semibold text-emerald-600">Activity Duration:</h1>
                     <h1>3 hours</h1>
                 </div>
-                <button className="mt-10 mb-16 px-12 py-2 bg-emerald-500 rounded-lg text-white">Book Now</button>
+                
+                {/* The book now button */}
+                <div className="">
+                        <button className="mt-5 mb-16 px-6 py-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
+                    </div>
             </div>
-        
+
         </div>
 
     )

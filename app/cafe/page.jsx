@@ -1,14 +1,20 @@
 "use client"
 
-import { Pacifico, Recursive, Roboto } from 'next/font/google';
+import { Lato, Recursive, Roboto } from 'next/font/google';
 import Footer from "../Components/Footer"
 import Food from "../Components/Food";
+import { motion } from 'framer-motion';
 import LocomotiveScroll from 'locomotive-scroll';
 
 
 const roboto = Roboto({
   subsets: ['latin'],
   weight: '400',
+})
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: '900',
 })
 
 const recursive = Recursive({
@@ -18,8 +24,8 @@ const recursive = Recursive({
 
 const page = () => {
 
-  const locomotiveScroll = new LocomotiveScroll();
 
+  const locomotiveScroll = new LocomotiveScroll();
 
   const foodData = [
     { id: "1", name: "ALL DAY BREAKFAST", price: "₹450", info: "3 eggs any style, sausages, grilled tomato, mushrooms, mash potatoes" },
@@ -111,26 +117,219 @@ const page = () => {
 
     <div className="relative w-full h-screen">
 
-      <div className="relative w-full h-screen bg-zinc-100 text-zinc-100">
+      <motion.div className="relative w-full h-screen bg-zinc-100 text-zinc-100 overflow-hidden">
 
-        <div className="absolute top-0 z-[2] w-full h-screen bg-zinc-900/65"></div>
-        <img className="w-full h-full object-cover object-center" src="/cafe.jpg" alt="" />
-        <h1 className="absolute w-full bottom-[40%] flex justify-center items-center z-[5] text-[10vw] sm:text-[6vw] font-extrabold">Cafe Salt Water</h1>
+        <img className="w-full h-full object-cover object-center brightness-50" src="/cafe.jpg" alt="" />
 
-      </div>
+      </motion.div>
+
+      {/* The cafe text */}
+      <motion.div className="w-full flex justify-center absolute z-[2] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] overflow-hidden">
+        <motion.div
+          initial={{ y: "50%", rotate: "40deg" }}
+          whileInView={{ y: 0, rotate: "0" }}
+          transition={{ ease: [0, 0.55, 0.45, 1], duration: 1, }}
+          className='flex text-[8vw] sm:text-[8vw] font-extrabold text-white origin-left'
+        >
+          <h1
+            initial={{ y: "80%", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.25 }}
+            className={`text-[12vw] sm:text-[6vw] font-extrabold text-white ${lato.className}`}>CAFÉ SALTWATER</h1>
+        </motion.div>
+      </motion.div>
 
 
-      {/* Ala carte breakfast */}
-      <div className="w-full pt-36 flex flex-col items-center px-16 border-b-[1px] border-zinc-200 pb-32">
+      <div className='w-full min-h-screen bg-[#FAF8F3] pb-32'>
 
-        <div className="flex flex-col items-center gap-6">
-          <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>ALA CARTE BREAKFAST</h1>
+        {/* first part */}
+        <div className='w-full flex flex-col items-center sm:items-start sm:flex-row '>
 
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+          {/* Ala carte breakfast */}
+          <div className="w-full sm:w-1/2 pt-32 flex flex-col items-center px-12 sm:px-16 sm:pb-32">
 
-            {foodData.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
+            <div className="flex flex-col items-center gap-6">
+              <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>ALA CARTE BREAKFAST</h1>
+
+              <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+
+                {foodData.map((item, index) => {
+                  return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+                })}
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div className='w-full sm:w-1/2 flex flex-col px-12 py-12'>
+            {/* Soups */}
+            <div className="w-full sm:pt-20 flex justify-center px-0 sm:px-16">
+
+              <div className="w-full flex flex-col items-center gap-6">
+                <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>SOUP</h1>
+
+                <div className={`w-full flex flex-col gap-6 ${roboto.className}`}>
+
+                  {food1Data.map((item, index) => {
+                    return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+                  })}
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* SALADS */}
+            <div className="w-full sm:px-16 pt-10 flex justify-center">
+
+              <div className="w-full flex flex-col items-center gap-6">
+                <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>SALADS</h1>
+
+                <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+
+                  {food2Data.map((item, index) => {
+                    return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+                  })}
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* PASTA & PIZZA */}
+            <div className="w-full sm:px-16 pt-20 flex justify-center">
+
+              <div className="w-full flex flex-col items-center gap-6">
+                <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>PASTA & PIZZA</h1>
+
+                <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+
+                  {food3Data.map((item, index) => {
+                    return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+                  })}
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* Dish1 Image */}
+        <div className="dish1 w-full h-[30vw] my:16 sm:my-24">
+          <img className="w-full h-full object-cover object-center" src="/dish1.webp" alt="" />
+        </div>
+
+        {/* Second part */}
+        <div className='w-full flex flex-col items-center sm:items-start sm:flex-row'>
+
+          {/* STARTERS */}
+          <div className="w-full sm:w-1/2 flex justify-center pt-16 px-12 sm:px-16 sm:pb-32">
+
+            <div className="w-full flex flex-col items-center gap-6">
+              <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>STARTERS</h1>
+
+              <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+
+                {food4Data.map((item, index) => {
+                  return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+                })}
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* MAINS */}
+          <div className="w-full sm:w-1/2 pt-16 flex justify-center px-12 sm:px-16 pb-16 sm:pb-0">
+
+            <div className="w-full flex flex-col items-center gap-6">
+              <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>MAINS</h1>
+
+              <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+
+                {food5Data.map((item, index) => {
+                  return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+                })}
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        {/* Dish2 Image */}
+        <div className="dish1 w-full h-[30vw] my:16 sm:my-24">
+          <img className="w-full h-full object-cover object-center" src="/dish2.webp" alt="" />
+        </div>
+
+        {/* Third part */}
+        <div className='w-full flex flex-col items-center sm:items-start sm:flex-row'>
+
+          {/* STAPLES & ACCOMPANIMENTS */}
+          <div className="w-full sm:w-1/2 flex justify-center pt-16 px-12 sm:px-16 sm:pb-32">
+
+            <div className="w-full flex flex-col items-center gap-6">
+              <h1 className={`text-[4.5vw] sm:text-[2.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>STAPLES & ACCOMPANIMENTS</h1>
+
+              <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+
+                {food6Data.map((item, index) => {
+                  return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+                })}
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* DESSERT */}
+          <div className="w-full sm:w-1/2 flex justify-center pt-16 px-12 sm:px-16 pb-16 sm:pb-32">
+
+            <div className="w-full flex flex-col items-center gap-6">
+              <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>DESSERT</h1>
+
+              <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+
+                {food7Data.map((item, index) => {
+                  return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+                })}
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        {/* Dish3 Image */}
+        <div className="dish1 w-full h-[30vw] my:16 sm:my-24">
+          <img className="w-full h-full object-cover object-center" src="/dish3.webp" alt="" />
+        </div>
+
+        {/* BEVERAGE */}
+        <div className="w-full pt-16 sm:pt-32 flex justify-center px-12 sm:px-60">
+
+          <div className="w-full flex flex-col items-center gap-6">
+            <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>BEVERAGE</h1>
+
+            <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
+
+              {food8Data.map((item, index) => {
+                return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
+              })}
+
+            </div>
 
           </div>
 
@@ -138,166 +337,6 @@ const page = () => {
 
       </div>
 
-
-
-      {/* Soups */}
-      <div className="w-full py-32 flex flex-col px-36 border-b-[1px] border-zinc-200">
-
-        <div className="flex px-16 flex-col items-center gap-6">
-          <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>SOUP</h1>
-
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
-
-            {food1Data.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* SALADS */}
-      <div className="w-full px-52 py-32 flex flex-col border-b-[1px] border-zinc-200">
-
-        <div className="flex flex-col items-center gap-6">
-          <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>SALADS</h1>
-
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
-
-            {food2Data.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* PASTA & PIZZA */}
-      <div className="w-full pt-32 flex flex-col px-52">
-
-        <div className="flex flex-col items-center gap-6">
-          <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>PASTA & PIZZA</h1>
-
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
-
-            {food3Data.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Dish1 Image */}
-      <div className="dish1 w-full h-[30vw] my-28">
-        <img className="w-full h-full object-cover object-center" src="/dish1.webp" alt="" />
-      </div>
-
-      {/* STARTERS */}
-      <div className="w-full flex flex-col px-52 border-b-[1px] border-zinc-200 pb-32">
-
-        <div className="flex flex-col items-center gap-6">
-          <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>STARTERS</h1>
-
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
-
-            {food4Data.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* MAINS */}
-      <div className="w-full pt-32 flex flex-col px-52">
-
-        <div className="flex flex-col items-center gap-6">
-          <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>MAINS</h1>
-
-          <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
-
-            {food5Data.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Dish2 Image */}
-      <div className="dish1 w-full h-[30vw] my-28">
-        <img className="w-full h-full object-cover object-center" src="/dish2.webp" alt="" />
-      </div>
-
-      {/* STAPLES & ACCOMPANIMENTS */}
-      <div className="w-full py-32 flex flex-col px-16 border-b-[1px] border-zinc-200">
-
-        <div className="flex flex-col items-center gap-6">
-          <h1 className={`text-[4.5] sm:text-[5.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>STAPLES & ACCOMPANIMENTS</h1>
-
-          <div className={`w-full flex flex-col px-36 gap-6 items-start ${roboto.className}`}>
-
-            {food6Data.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* DESSERT */}
-      <div className="w-full pt-32 flex flex-col px-16">
-
-        <div className="flex flex-col items-center gap-6">
-          <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>DESSERT</h1>
-
-          <div className={`w-full flex flex-col px-36 gap-6 items-start ${roboto.className}`}>
-
-            {food7Data.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Dish3 Image */}
-      <div className="dish1 w-full h-[30vw] my-28">
-        <img className="w-full h-full object-cover object-center" src="/dish3.webp" alt="" />
-      </div>
-
-      {/* BEVERAGE */}
-      <div className="w-full pt-32 flex flex-col px-16 mb-32">  
-
-        <div className="flex flex-col items-center gap-6">
-          <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>BEVERAGE</h1>
-
-          <div className={`w-full flex flex-col px-36 gap-6 items-start ${roboto.className}`}>
-
-            {food8Data.map((item, index) => {
-              return <Food key={item.id} name={item.name} price={item.price} info={item.info} />
-            })}
-
-          </div>
-
-        </div>
-
-      </div>
 
       <Footer />
 

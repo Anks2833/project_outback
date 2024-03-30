@@ -1,5 +1,6 @@
 "use client"
 
+import { motion } from "framer-motion"
 import Act_card from "./Act_card"
 import Act_card1 from "./Act_card1"
 
@@ -45,7 +46,16 @@ const Page1_act = () => {
 
                             <h1>Duration: 4 days (6 hours daily)  |  Price: ₹ 28,000</h1>
 
-                            <button className="w-[8vw] mt-10 p-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
+                            {/* The book now button */}
+                            <div>
+                                <motion.button
+                                    whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
+                                    whileTap={{ scale: 0.9 }}
+                                    className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
+                                >
+                                    Book now
+                                </motion.button>
+                            </div>
                         </div>
 
                         <div className="w-1/2 h-[75vh] bg-red-500 hidden sm:flex">
@@ -67,7 +77,7 @@ const Page1_act = () => {
                     </div>
 
                     {/* Para1 */}
-                    <div className="w-full flex flex-wrap justify-center text-center font-light text-[4vw] px-8">
+                    <div className="w-full flex flex-wrap justify-center text-center font-light text-[4vw] px-8 py-3">
                         <p>This course enables you to get a diving license, permitting dives anywhere in the world to a maximum depth of 18 meters. The course involves a bit of theory, which can be covered online if pre-booked, decreasing course duration to 3 days (water activity only). Usually, in a 4-day format, 1st day is in a theory, 2nd day is confined water training, 3rd day two dives in the ocean to a max depth of 12m, 4th day two more dives in the ocean to a max depth of 18m.</p>
                     </div>
 

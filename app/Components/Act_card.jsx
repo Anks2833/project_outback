@@ -1,5 +1,7 @@
 "use client"
 
+import { motion } from "framer-motion"
+
 
 const Act_card = () => {
     return (
@@ -30,7 +32,16 @@ const Act_card = () => {
 
                             <h1>Activity Duration: 3 hours</h1>
 
-                            <button className="w-[8vw] mt-10 p-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
+                            {/* The book now button */}
+                            <div>
+                                <motion.button
+                                    whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
+                                    whileTap={{ scale: 0.9 }}
+                                    className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
+                                >
+                                    Book now
+                                </motion.button>
+                            </div>
                         </div>
 
                         <div className="w-1/2 h-[55vh] hidden sm:flex">
@@ -61,11 +72,11 @@ const Act_card = () => {
                     <h1 className="font-semibold text-emerald-600">Activity Duration:</h1>
                     <h1>3 hours</h1>
                 </div>
-                
+
                 {/* The book now button */}
                 <div className="">
-                        <button className="mt-5 mb-16 px-6 py-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
-                    </div>
+                    <button className="mt-5 mb-16 px-6 py-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
+                </div>
             </div>
 
         </div>

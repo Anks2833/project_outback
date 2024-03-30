@@ -326,7 +326,7 @@ const page = () => {
         >
           <h2
             className="w-full text-[6vw] sm:text-[2.5vw] font-extrabold text-[#53565A] border-b-[1px] border-b-zinc-500"
-            initial={{ y: "30%", opacity: 0 }}
+            initial={{ y: "50%", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
@@ -337,8 +337,8 @@ const page = () => {
 
         <motion.div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           <motion.div
-            initial={{ y: "50%", opacity: 0 }}
-            whileInView={{ y: "0", opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
             className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
@@ -365,8 +365,8 @@ const page = () => {
           </motion.div>
 
           <motion.div
-            initial={{ y: "50%", opacity: 0 }}
-            whileInView={{ y: "0", opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6 }}
             className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
@@ -392,8 +392,8 @@ const page = () => {
           </motion.div>
 
           <motion.div
-            initial={{ y: "50%", opacity: 0 }}
-            whileInView={{ y: "0", opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.8 }}
             className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"

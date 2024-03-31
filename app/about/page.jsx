@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import Footer from "../Components/Footer";
 import LocomotiveScroll from 'locomotive-scroll';
 import { Lato } from 'next/font/google';
+import Link from "next/link";
 
 const lato = Lato({
-    subsets: ['latin'],
-    weight: ['900'],
+  subsets: ['latin'],
+  weight: ['900'],
 })
 
 
@@ -47,7 +48,7 @@ export default function About() {
 
       {/* Our story */}
       <div
-        className="flex sm:flex sm:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left"
+        className="flex sm:flex md:px-10 lg:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left"
       >
         <div
           initial={{ y: "50%", opacity: 0 }}
@@ -77,23 +78,24 @@ export default function About() {
               <p>Overlooking the luscious green tropical trees, with pristine clear beach & clear blue waters a minute away, our resort, Outback Resorts has created its own niche. The picturesque jungle side view and proximity to the ocean give a sense of belonging to the place. The interiors have a more contemporary outlook which depicts the transient dynamics between the sky, land and the ocean. The highlight of the property is in our recycled plastic installations, crossing 200,000 in numbers.</p>
 
               {/* The book now button */}
-              <div>
+              <Link href={"https://live.ipms247.com/booking/book-rooms-outbackresorts"} target='_blank'>
                 <motion.button
                   whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
-                  whileTap={{scale: 0.9}}
+                  whileTap={{ scale: 0.9 }}
                   className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
                 >
                   Book now
                 </motion.button>
-              </div>
+              </Link>
             </div>
 
             <div className="w-1/2 h-[55vh] hidden sm:flex">
-              <img className='w-full h-full object-cover origin-center' src="pexels-aviv.jpg" alt="noimg" />
+              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full object-cover origin-center' src="pexels-aviv.jpg" alt="noimg" />
             </div>
           </div>
         </div>
       </div>
+
 
       {/* Gallery */}
       <div className='w-full relative flex items-center gap-3 overflow-hidden bg-[#FAF8F3] text-center sm:text-left'>
@@ -108,29 +110,29 @@ export default function About() {
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", duration: 50, repeat: Infinity }}
         >
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img
               className='w-full h-full' src="/out1.webp" alt="noimg"
             />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out2.webp" alt="noimg" />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out3.webp" alt="noimg" />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out-4.webp" alt="noimg" />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out5.webp" alt="noimg" />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out6.webp" alt="noimg" />
           </div>
         </motion.div>
@@ -142,36 +144,36 @@ export default function About() {
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", duration: 50, repeat: Infinity }}
         >
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img
               className='w-full h-full' src="/out1.webp" alt="noimg"
             />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out2.webp" alt="noimg" />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out3.webp" alt="noimg" />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out-4.webp" alt="noimg" />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out5.webp" alt="noimg" />
           </div>
 
-          <div className="w-[60vw] h-[20vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out6.webp" alt="noimg" />
           </div>
         </motion.div>
       </div>
 
       {/* recycle */}
-      <motion.div className="flex sm:flex sm:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left">
+      <motion.div className="flex sm:flex md:px-10 lg:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left">
         <motion.div
           initial={{ y: "50%", opacity: 0 }}
           whileInView={{ y: "0", opacity: 1 }}
@@ -180,9 +182,9 @@ export default function About() {
           className="w-full text-black flex flex-col gap-6"
         >
 
-          <div className='w-full flex px-8 sm:px-0 border-b-[1px] border-b-zinc-500'>
+          <div className='w-full flex px-8 sm:px-0'>
             <h2
-              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A]"
+              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] sm:border-b-[1px] sm:border-b-zinc-500"
               initial={{ y: "30%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -202,19 +204,19 @@ export default function About() {
               <p>We aim to give our visitors some of the most amazing experiences of a lifetime that will remain imbibed in their memories for ages. We are here to create everlasting impressions and be a part of your journey. A journey to unfold the hidden mysteries of the Havelock and enjoy what it has to offer to the fullest!</p>
 
               {/* The book now button */}
-              <div>
+              <Link href={"https://live.ipms247.com/booking/book-rooms-outbackresorts"} target='_blank'>
                 <motion.button
                   whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
-                  whileTap={{scale: 0.9}}
+                  whileTap={{ scale: 0.9 }}
                   className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
                 >
                   Book now
                 </motion.button>
-              </div>
+              </Link>
             </div>
 
             <div className="w-1/2 h-[55vh] hidden sm:flex">
-              <img className='w-full h-full object-cover origin-center' src="asset 23.webp" alt="noimg" />
+              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full w-full h-full object-cover origin-center' src="asset 23.webp" alt="noimg" />
             </div>
           </div>
         </motion.div>

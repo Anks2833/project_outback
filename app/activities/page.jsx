@@ -5,6 +5,7 @@ import Footer from "../Components/Footer"
 import Page1_act from "../Components/Page1_act"
 import LocomotiveScroll from 'locomotive-scroll';
 import { Lato } from 'next/font/google';
+import Link from "next/link";
 
 const lato = Lato({
     subsets: ['latin'],

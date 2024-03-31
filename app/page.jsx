@@ -6,6 +6,7 @@ import Booking from './Components/Booking';
 import Reviews from './Components/Reviews';
 import { motion } from 'framer-motion';
 import LocomotiveScroll from 'locomotive-scroll';
+import Link from 'next/link';
 
 
 const page = () => {
@@ -27,7 +28,7 @@ const page = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
-            className='absolute top-[20%] w-[15vw] h-[20vh] hidden sm:flex' src="logo_white.png" alt="noimg"
+            className='absolute top-[20%] w-[15vw] h-[20vh] md:w-[20vw] md:h-[15vh] lg:w-[15vw] lg:h-[20vh] hidden md:flex lg:flex' src="logo_white.png" alt="noimg"
           />
 
           <Booking />
@@ -37,7 +38,7 @@ const page = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
             viewport={{ once: true }}
-            className='absolute bottom-[2%] w-[15vw] h-[15vw] sm:w-[5vw] sm:h-[10vh]' src="travel.webp" alt="noimg"
+            className='absolute bottom-[2%] w-[15vw] h-[15vw] md:w-[10vw] md:h-[10vh] lg:w-[5vw] lg:h-[10vh]' src="travel.webp" alt="noimg"
           />
 
         </div>
@@ -60,7 +61,7 @@ const page = () => {
 
       {/* Our story */}
       <div
-        className="flex sm:flex sm:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left"
+        className="flex sm:flex md:px-10 lg:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left"
       >
         <div
           initial={{ y: "50%", opacity: 0 }}
@@ -90,19 +91,19 @@ const page = () => {
               <p>Overlooking the luscious green tropical trees, with pristine clear beach & clear blue waters a minute away, our resort, Outback Resorts has created its own niche. The picturesque jungle side view and proximity to the ocean give a sense of belonging to the place. The interiors have a more contemporary outlook which depicts the transient dynamics between the sky, land and the ocean. The highlight of the property is in our recycled plastic installations, crossing 200,000 in numbers.</p>
 
               {/* The book now button */}
-              <div>
+              <Link href={"https://live.ipms247.com/booking/book-rooms-outbackresorts"} target='_blank'>
                 <motion.button
                   whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
-                  whileTap={{scale: 0.9}}
+                  whileTap={{ scale: 0.9 }}
                   className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
                 >
                   Book now
                 </motion.button>
-              </div>
+              </Link>
             </div>
 
             <div className="w-1/2 h-[55vh] hidden sm:flex">
-              <img className='w-full h-full object-cover origin-center' src="pexels-aviv.jpg" alt="noimg" />
+              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full object-cover origin-center' src="pexels-aviv.jpg" alt="noimg" />
             </div>
           </div>
         </div>
@@ -122,29 +123,29 @@ const page = () => {
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", duration: 50, repeat: Infinity }}
         >
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img
               className='w-full h-full' src="/out1.webp" alt="noimg"
             />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out2.webp" alt="noimg" />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out3.webp" alt="noimg" />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out-4.webp" alt="noimg" />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out5.webp" alt="noimg" />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out6.webp" alt="noimg" />
           </div>
         </motion.div>
@@ -156,36 +157,36 @@ const page = () => {
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", duration: 50, repeat: Infinity }}
         >
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img
               className='w-full h-full' src="/out1.webp" alt="noimg"
             />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out2.webp" alt="noimg" />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out3.webp" alt="noimg" />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out-4.webp" alt="noimg" />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out5.webp" alt="noimg" />
           </div>
 
-          <div className="w-[70vw] h-[30vh] sm:w-[40vw] sm:h-[50vh]">
+          <div className="w-[70vw] h-[30vh] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[50vh]">
             <img className='w-full h-full' src="/out6.webp" alt="noimg" />
           </div>
         </motion.div>
       </div>
 
       {/* recycle */}
-      <motion.div className="flex sm:flex sm:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left">
+      <motion.div className="flex sm:flex md:px-10 lg:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left">
         <motion.div
           initial={{ y: "50%", opacity: 0 }}
           whileInView={{ y: "0", opacity: 1 }}
@@ -194,9 +195,9 @@ const page = () => {
           className="w-full text-black flex flex-col gap-6"
         >
 
-          <div className='w-full flex px-8 sm:px-0 border-b-[1px] border-b-zinc-500'>
+          <div className='w-full flex px-8 sm:px-0'>
             <h2
-              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A]"
+              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] sm:border-b-[1px] sm:border-b-zinc-500"
               initial={{ y: "30%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -216,19 +217,19 @@ const page = () => {
               <p>We aim to give our visitors some of the most amazing experiences of a lifetime that will remain imbibed in their memories for ages. We are here to create everlasting impressions and be a part of your journey. A journey to unfold the hidden mysteries of the Havelock and enjoy what it has to offer to the fullest!</p>
 
               {/* The book now button */}
-              <div>
+              <Link href={"https://live.ipms247.com/booking/book-rooms-outbackresorts"} target='_blank'>
                 <motion.button
                   whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
-                  whileTap={{scale: 0.9}}
+                  whileTap={{ scale: 0.9 }}
                   className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
                 >
                   Book now
                 </motion.button>
-              </div>
+              </Link>
             </div>
 
             <div className="w-1/2 h-[55vh] hidden sm:flex">
-              <img className='w-full h-full object-cover origin-center' src="asset 23.webp" alt="noimg" />
+              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full w-full h-full object-cover origin-center' src="asset 23.webp" alt="noimg" />
             </div>
           </div>
         </motion.div>
@@ -238,7 +239,7 @@ const page = () => {
       <div
         className="relative bg-[#FAF8F3]">
         <img
-          className="z-0 w-full h-[500px] object-cover brightness-50"
+          className="w-full h-[500px] object-cover brightness-50"
           src="pexels-pavel.jpg"
           alt="noimg"
         />
@@ -260,7 +261,7 @@ const page = () => {
 
 
       {/* Cafe saltwater part */}
-      <motion.div className="flex sm:flex sm:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left">
+      <motion.div className="flex sm:flex md:px-10 lg:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left">
         <motion.div
           initial={{ y: "50%", opacity: 0 }}
           whileInView={{ y: "0", opacity: 1 }}
@@ -294,19 +295,19 @@ const page = () => {
               </div>
 
               {/* The book now button */}
-              <div>
+              <Link href={"https://live.ipms247.com/booking/book-rooms-outbackresorts"} target='_blank'>
                 <motion.button
                   whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
-                  whileTap={{scale: 0.9}}
+                  whileTap={{ scale: 0.9 }}
                   className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
                 >
                   Book now
                 </motion.button>
-              </div>
+              </Link>
             </div>
 
             <div className="w-1/2 h-[55vh] hidden sm:flex">
-              <img className='w-full h-full object-cover origin-center' src="asset 24.webp" alt="noimg" />
+              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full w-full h-full object-cover origin-center' src="asset 24.webp" alt="noimg" />
             </div>
           </div>
         </motion.div>
@@ -335,13 +336,13 @@ const page = () => {
           </h2>
         </motion.div>
 
-        <motion.div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div className="grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-3">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
           >
             <div className="h-96 w-96">
               <img
@@ -369,7 +370,7 @@ const page = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6 }}
-            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
           >
             <div className="h-96 w-96">
               <img
@@ -396,7 +397,7 @@ const page = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.8 }}
-            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
+            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
           >
             <div className="h-96 w-96">
               <img

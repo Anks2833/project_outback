@@ -17,9 +17,10 @@ const Booking = () => {
         >
 
             {/* Booking section for pc */}
-            <div className="w-[55vw] h-[25vh] bg-white p-4 hidden sm:flex sm:justify-center rounded-2xl">
+            <div className="md:w-[80vw] lg:w-[55vw] lg:h-[25vh] bg-white hidden p-4 sm:flex sm:justify-center rounded-2xl">
 
-                <div className="w-[30vw] flex justify-between px-12 items-center text-black border-[1px] border-zinc-200 rounded-tl-2xl rounded-bl-2xl p-6">
+                {/* The check in check out section */}
+                <div className="md:w-1/2 lg:w-1/2 flex md:flex-col lg:flex-row md:gap-2 lg:gap-0 justify-center px-12 items-center text-black border-[1px] border-zinc-200 rounded-tl-2xl rounded-bl-2xl p-6">
                     <div className="flex flex-col justify-center">
                         <h3 className={`text-[2vw] ${roboto.className}`}>Check In</h3>
                         <input className='outline-none' type="date" name="" id="" />
@@ -32,8 +33,9 @@ const Booking = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-8 text-black border-[1px] border-zinc-200 rounded-tr-2xl rounded-br-2xl p-6">
+                <div className="md:w-1/2 lg:w-1/2 flex justify-center items-center gap-8 text-black border-[1px] border-zinc-200 rounded-tr-2xl rounded-br-2xl p-6">
 
+                    {/* The promotion text with an input */}
                     <div className="flex flex-col gap-2">
                         <h2>Promotion</h2>
                         <input className="w-[8vw] outline-none" type="text" />

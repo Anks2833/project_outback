@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Act_card from "./Act_card"
 import Act_card1 from "./Act_card1"
+import Link from "next/link"
 
 const Page1_act = () => {
 
@@ -17,7 +18,7 @@ const Page1_act = () => {
             <Act_card />
 
             {/* For desktop screen */}
-            <div className="hidden sm:flex px-32 my-20">
+            <div className="hidden sm:flex md:px-10 lg:px-32 my-20">
                 <div className="w-full text-black flex flex-col gap-6">
                     <h2
                         className="w-full text-[3.5vw] sm:text-[3vw] font-extrabold text-[#53565A] border-b-[1px] border-b-zinc-500"
@@ -47,7 +48,7 @@ const Page1_act = () => {
                             <h1>Duration: 4 days (6 hours daily)  |  Price: ₹ 28,000</h1>
 
                             {/* The book now button */}
-                            <div>
+                            <Link href={"https://live.ipms247.com/booking/book-rooms-outbackresorts"} target='_blank'>
                                 <motion.button
                                     whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
                                     whileTap={{ scale: 0.9 }}
@@ -55,11 +56,11 @@ const Page1_act = () => {
                                 >
                                     Book now
                                 </motion.button>
-                            </div>
+                            </Link>
                         </div>
 
-                        <div className="w-1/2 h-[75vh] bg-red-500 hidden sm:flex">
-                            <img className='w-full h-full object-cover origin-center' src="img2.jpg" alt="noimg" />
+                        <div className="w-1/2 h-[75vh] hidden sm:flex">
+                            <img className='w-full h-full md:w-full md:h-[40vh] lg:w-full lg:h-full object-cover origin-center' src="img2.jpg" alt="noimg" />
                         </div>
                     </div>
                 </div>
@@ -105,9 +106,15 @@ const Page1_act = () => {
                     </div>
 
                     {/* The book now button */}
-                    <div className="">
-                        <button className="mt-5 mb-16 px-6 py-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
-                    </div>
+                    <Link href={"https://live.ipms247.com/booking/book-rooms-outbackresorts"} target='_blank'>
+                        <motion.button
+                            whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
+                            whileTap={{ scale: 0.9 }}
+                            className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
+                        >
+                            Book now
+                        </motion.button>
+                    </Link>
 
                 </div>
             </div>

@@ -135,21 +135,22 @@ const page = () => {
             initial={{ y: "80%", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.25 }}
-            className={`text-[12vw] sm:text-[6vw] font-extrabold text-white ${lato.className}`}>CAFÉ SALTWATER</h1>
+            className={`text-[10vw] sm:text-[6vw] font-extrabold text-white ${lato.className}`}>CAFÉ SALTWATER</h1>
         </motion.div>
       </motion.div>
 
 
+      {/* The menu */}
       <div className='w-full min-h-screen bg-[#FAF8F3] pb-32'>
 
         {/* first part */}
-        <div className='w-full flex flex-col items-center sm:items-start sm:flex-row '>
+        <div className='w-full flex flex-col items-center lg:items-start lg:flex-row '>
 
           {/* Ala carte breakfast */}
-          <div className="w-full sm:w-1/2 pt-32 flex flex-col items-center px-12 sm:px-16 sm:pb-32">
+          <div className="w-full lg:w-1/2 pt-32 flex flex-col items-center px-12 lg:px-16 lg:pb-32">
 
             <div className="flex flex-col items-center gap-6">
-              <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>ALA CARTE BREAKFAST</h1>
+              <h1 className={`text-[5.5vw] lg:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>ALA CARTE BREAKFAST</h1>
 
               <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
 
@@ -163,13 +164,13 @@ const page = () => {
 
           </div>
 
-
-          <div className='w-full sm:w-1/2 flex flex-col px-12 py-12'>
+          {/* Soup salads and pizza */}
+          <div className='w-full lg:w-1/2 flex flex-col px-12 py-12'>
             {/* Soups */}
-            <div className="w-full sm:pt-20 flex justify-center px-0 sm:px-16">
+            <div className="w-full lg:pt-20 flex justify-center px-0 md:px-10 lg:px-16">
 
               <div className="w-full flex flex-col items-center gap-6">
-                <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>SOUP</h1>
+                <h1 className={`text-[5.5vw] lg:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>SOUP</h1>
 
                 <div className={`w-full flex flex-col gap-6 ${roboto.className}`}>
 
@@ -184,10 +185,10 @@ const page = () => {
             </div>
 
             {/* SALADS */}
-            <div className="w-full sm:px-16 pt-10 flex justify-center">
+            <div className="w-full lg:px-16 pt-10 flex justify-center px-0 md:px-10">
 
               <div className="w-full flex flex-col items-center gap-6">
-                <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>SALADS</h1>
+                <h1 className={`text-[5.5vw] lg:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>SALADS</h1>
 
                 <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
 
@@ -202,10 +203,10 @@ const page = () => {
             </div>
 
             {/* PASTA & PIZZA */}
-            <div className="w-full sm:px-16 pt-20 flex justify-center">
+            <div className="w-full lg:px-16 pt-20 flex justify-center px-0 md:px-10">
 
               <div className="w-full flex flex-col items-center gap-6">
-                <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>PASTA & PIZZA</h1>
+                <h1 className={`text-[5.5vw] lg:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>PASTA & PIZZA</h1>
 
                 <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
 
@@ -228,13 +229,13 @@ const page = () => {
         </div>
 
         {/* Second part */}
-        <div className='w-full flex flex-col items-center sm:items-start sm:flex-row'>
+        <div className='w-full flex flex-col items-center lg:items-start lg:flex-row'>
 
           {/* STARTERS */}
-          <div className="w-full sm:w-1/2 flex justify-center pt-16 px-12 sm:px-16 sm:pb-32">
+          <div className="w-full lg:w-1/2 flex justify-center pt-16 px-12 lg:px-16 lg:pb-32">
 
-            <div className="w-full flex flex-col items-center gap-6">
-              <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>STARTERS</h1>
+            <div className="w-full flex flex-col items-center gap-6 px-0 md:px-10">
+              <h1 className={`text-[5.5vw] lg:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>STARTERS</h1>
 
               <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
 
@@ -249,10 +250,10 @@ const page = () => {
           </div>
 
           {/* MAINS */}
-          <div className="w-full sm:w-1/2 pt-16 flex justify-center px-12 sm:px-16 pb-16 sm:pb-0">
+          <div className="w-full lg:w-1/2 pt-16 flex justify-center px-12 lg:px-16 pb-16 lg:pb-0">
 
-            <div className="w-full flex flex-col items-center gap-6">
-              <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>MAINS</h1>
+            <div className="w-full flex flex-col items-center gap-6 px-0 md:px-10">
+              <h1 className={`text-[5.5vw] lg:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>MAINS</h1>
 
               <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
 
@@ -273,13 +274,13 @@ const page = () => {
         </div>
 
         {/* Third part */}
-        <div className='w-full flex flex-col items-center sm:items-start sm:flex-row'>
+        <div className='w-full flex flex-col items-center lg:items-start lg:flex-row'>
 
           {/* STAPLES & ACCOMPANIMENTS */}
-          <div className="w-full sm:w-1/2 flex justify-center pt-16 px-12 sm:px-16 sm:pb-32">
+          <div className="w-full lg:w-1/2 flex justify-center pt-16 px-12 lg:px-16 lg:pb-32">
 
-            <div className="w-full flex flex-col items-center gap-6">
-              <h1 className={`text-[4.5vw] sm:text-[2.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>STAPLES & ACCOMPANIMENTS</h1>
+            <div className="w-full flex flex-col items-center gap-6 px-0 md:px-10">
+              <h1 className={`text-[4.5vw] lg:text-[2.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>STAPLES & ACCOMPANIMENTS</h1>
 
               <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
 
@@ -294,10 +295,10 @@ const page = () => {
           </div>
 
           {/* DESSERT */}
-          <div className="w-full sm:w-1/2 flex justify-center pt-16 px-12 sm:px-16 pb-16 sm:pb-32">
+          <div className="w-full lg:w-1/2 flex justify-center pt-16 px-12 lg:px-16 pb-16 lg:pb-32">
 
-            <div className="w-full flex flex-col items-center gap-6">
-              <h1 className={`text-[5.5vw] sm:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>DESSERT</h1>
+            <div className="w-full flex flex-col items-center gap-6 px-0 md:px-10">
+              <h1 className={`text-[5.5vw] lg:text-[3vw] font-extrabold text-emerald-700 ${recursive.className}`}>DESSERT</h1>
 
               <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
 
@@ -318,10 +319,10 @@ const page = () => {
         </div>
 
         {/* BEVERAGE */}
-        <div className="w-full pt-16 sm:pt-32 flex justify-center px-12 sm:px-60">
+        <div className="w-full pt-16 lg:pt-32 flex justify-center px-12 lg:px-60">
 
-          <div className="w-full flex flex-col items-center gap-6">
-            <h1 className={`text-[5.5vw] sm:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>BEVERAGE</h1>
+          <div className="w-full flex flex-col items-center gap-6 px-0 md:px-10">
+            <h1 className={`text-[5.5vw] lg:text-[6.5vw] font-extrabold text-emerald-700 ${recursive.className}`}>BEVERAGE</h1>
 
             <div className={`w-full flex flex-col gap-6 items-start ${roboto.className}`}>
 

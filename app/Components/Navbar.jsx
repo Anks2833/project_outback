@@ -44,8 +44,7 @@ const Navbar = () => {
             <motion.div
                 initial={{ y: "50%", opacity: 0 }}
                 animate={{ y: "0", opacity: 1 }}
-                transition={{ staggerChildren: 0.25 }}
-                className="absolute top-0 z-[5] w-full flex items-center justify-between px-10 sm:px-36 pt-6"
+                className="absolute top-0 z-[5] w-full md:w-full flex items-center justify-between px-10 md:px-8 lg:px-36 pt-6"
             >
 
                 <motion.div
@@ -103,8 +102,9 @@ const Navbar = () => {
                     <IoMenuOutline style={{ width: "8vw", height: "8vw" }} />
                 </span>
 
+                {/* The links */}
                 <motion.div
-                    className={`hidden sm:flex sm:gap-5 ${lato.className} font-bold text-white`}
+                    className={`hidden md:flex md:gap-3 lg:flex lg:gap-5 ${lato.className} font-bold text-white`}
                 >
 
                     {links.map((item, index) => {

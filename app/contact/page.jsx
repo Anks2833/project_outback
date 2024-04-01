@@ -37,9 +37,6 @@ const page = () => {
           className='flex text-[8vw] lg:text-[8vw] font-extrabold text-white origin-left'
         >
           <h1
-            initial={{ y: "80%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.25 }}
             className={`text-[12vw] lg:text-[6vw] font-extrabold text-white ${lato.className}`}>Contact</h1>
         </motion.div>
       </motion.div>

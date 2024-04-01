@@ -5,7 +5,6 @@ import Footer from "../Components/Footer"
 import Page1_act from "../Components/Page1_act"
 import LocomotiveScroll from 'locomotive-scroll';
 import { Lato } from 'next/font/google';
-import Link from "next/link";
 
 const lato = Lato({
     subsets: ['latin'],
@@ -28,19 +27,6 @@ const page = () => {
 
             </div>
 
-            {/* The scroll down text */}
-            {/* <motion.div
-                // ref={scrollRef}
-                // data-scroll
-                // data-scroll-speed="-.5"
-                initial={{ y: 0 }}
-                animate={{ y: "1.3vw" }}
-                transition={{ ease: [0.83, 0, 0.17, 1], duration: 1, repeat: Infinity, repeatType: "reverse" }}
-
-                className="absolute bottom-5 z-[10] w-full hidden sm:flex sm:justify-center text-white text-sm">
-                Scroll down
-            </motion.div> */}
-
             {/* THE ACTIVITIES TEXT */}
             <motion.div className="w-full flex justify-center absolute z-[2] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] overflow-hidden">
                 <motion.div
@@ -50,9 +36,6 @@ const page = () => {
                     className='flex text-[8vw] sm:text-[8vw] font-extrabold text-white origin-left'
                 >
                     <h1
-                        initial={{ y: "80%", opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.25 }}
                         className={`text-[12vw] sm:text-[6vw] font-extrabold text-white ${lato.className}`}>ACTIVITIES</h1>
                 </motion.div>
             </motion.div>

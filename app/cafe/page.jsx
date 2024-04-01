@@ -132,9 +132,6 @@ const page = () => {
           className='flex text-[8vw] sm:text-[8vw] font-extrabold text-white origin-left'
         >
           <h1
-            initial={{ y: "80%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.25 }}
             className={`text-[10vw] sm:text-[6vw] font-extrabold text-white ${lato.className}`}>CAFÉ SALTWATER</h1>
         </motion.div>
       </motion.div>

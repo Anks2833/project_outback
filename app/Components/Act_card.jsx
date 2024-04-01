@@ -13,11 +13,6 @@ const Act_card = () => {
             <div className="hidden sm:flex md:px-10 lg:px-32 my-20">
                 <div className="w-full text-black flex flex-col gap-6">
                     <h2
-                        className="w-full text-[3.5vw] sm:text-[3vw] font-extrabold text-[#53565A] border-b-[1px] border-b-zinc-500"
-                        initial={{ y: "30%", opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
                     >
                         Try Scuba Dive
                     </h2>

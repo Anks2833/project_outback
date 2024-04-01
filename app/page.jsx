@@ -7,6 +7,7 @@ import Reviews from './Components/Reviews';
 import { motion } from 'framer-motion';
 import LocomotiveScroll from 'locomotive-scroll';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const page = () => {
@@ -23,23 +24,43 @@ const page = () => {
       <div className="relative w-full h-screen">
 
         <div className='w-full flex flex-col items-center'>
-          <motion.img
+
+          {/* The logo image */}
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
-            className='absolute top-[20%] w-[15vw] h-[20vh] md:w-[30vw] md:h-[15vh] lg:w-[15vw] lg:h-[20vh] hidden md:flex lg:flex' src="logo_white.png" alt="noimg"
-          />
+            className='absolute top-[20%] w-[15vw] h-[20vh] md:w-[30vw] md:h-[15vh] lg:w-[15vw] lg:h-[20vh] hidden md:flex lg:flex'
+          >
+            <Image
+              width={"300"}
+              height={"300"}
+              priority
+              src="/logo_white.png"
+              alt="noimg"
+            />
+          </motion.div>
 
+          {/* The booking part */}
           <Booking />
 
-          <motion.img
+          {/* The bottom image */}
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
             viewport={{ once: true }}
-            className='absolute bottom-[2%] w-[15vw] h-[15vw] md:w-[15vw] md:h-[10vh] lg:w-[5vw] lg:h-[10vh]' src="travel.webp" alt="noimg"
-          />
+            className='absolute bottom-[2%] w-[15vw] h-[15vw] md:w-[15vw] md:h-[10vh] lg:w-[5vw] lg:h-[10vh]'
+          >
+            <Image
+              width={"300"}
+              height={"300"}
+              priority
+              src="/travel.webp"
+              alt="noimg"
+            />
+          </motion.div>
 
         </div>
 
@@ -64,18 +85,11 @@ const page = () => {
         className="flex sm:flex md:px-10 lg:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left"
       >
         <div
-          initial={{ y: "50%", opacity: 0 }}
-          whileInView={{ y: "0", opacity: 1 }}
-          viewport={{ once: true }}
           className="w-full text-black flex flex-col gap-6"
         >
           <div className='w-full flex px-8 sm:px-0'>
             <h2
               className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
-              initial={{ y: "30%", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
             >
               Our Story
             </h2>
@@ -198,10 +212,6 @@ const page = () => {
           <div className='w-full flex px-8 sm:px-0'>
             <h2
               className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
-              initial={{ y: "30%", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
             >
               400,000 Recycled Installations
             </h2>
@@ -272,10 +282,6 @@ const page = () => {
           <div className='w-full flex px-8 sm:px-0'>
             <h2
               className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
-              initial={{ y: "30%", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
             >
               Café Saltwater
             </h2>
@@ -327,10 +333,6 @@ const page = () => {
         >
           <h2
             className="w-full text-[6vw] sm:text-[2.5vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
-            initial={{ y: "50%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
           >
             Explore Havelock
           </h2>

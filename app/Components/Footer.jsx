@@ -74,7 +74,7 @@ const Footer = () => {
               href={"https://www.facebook.com/outbackresorts"}
               target="_blank"
               className="">
-              <IoLogoFacebook style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
+              <IoLogoFacebook style={{width: "5vw sm:1.5vw", height: "5vw sm:1.5vw", color: "white"}} />
             </Link>
 
             {/* Insta */}
@@ -82,7 +82,7 @@ const Footer = () => {
               href={"https://www.instagram.com/outbackresorts/"}
               target="_blank"
               className="">
-              <IoLogoInstagram style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
+              <IoLogoInstagram style={{width: "5vw sm:1.5vw", height: "5vw sm:1.5vw", color: "white"}} />
             </Link>
 
             {/* Wp */}
@@ -90,21 +90,21 @@ const Footer = () => {
               href={"https://api.whatsapp.com/send/?phone=%2B919531949235&text&type=phone_number&app_absent=0"}
               target="_blank"
               className="">
-              <IoLogoWhatsapp style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
+              <IoLogoWhatsapp style={{width: "5vw sm:1.5vw", height: "5vw sm:1.5vw", color: "white"}} />
             </Link>
 
             {/* Call */}
             <Link
               href={""}
               className="">
-              <IoIosCall style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
+              <IoIosCall style={{width: "5vw sm:1.5vw", height: "5vw sm:1.5vw", color: "white"}} />
             </Link>
 
             {/* Mail */}
             <Link
               href={""}
               className="">
-              <IoMail style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
+              <IoMail style={{width: "5vw sm:1.5vw", height: "5vw sm:1.5vw", color: "white"}} />
             </Link>
 
           </div>

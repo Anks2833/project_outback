@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Footer from "../Components/Footer";
 import { Lato } from 'next/font/google';
 import Link from "next/link";
+import Image from "next/image";
 
 const lato = Lato({
   subsets: ['latin'],
@@ -20,11 +21,15 @@ const page = () => {
     <div className="relative w-full h-screen bg-[#FAF8F3] text-zinc-100">
 
       <div className="absolute top-0 z-[2] w-full h-screen bg-black/65"></div>
-      <img
-        className="w-full h-full object-cover object-center"
-        src="palm.jpg"
-        alt=""
-      />
+      <div className="w-full h-full object-cover object-center">
+        <Image
+          layout="fill"
+          objectFit="cover"
+          priority={true}
+          src="/palm.jpg"
+          alt="noimg"
+        />
+      </div>
 
 
       <motion.div className="w-full flex justify-center absolute z-[2] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] overflow-hidden">
@@ -84,10 +89,10 @@ const page = () => {
             </div>
 
             <Link href={"https://www.google.com/maps/dir//Outback+Resorts,+SH5+Govind+Nagar+Havelock+Islands,+Andaman+and+Nicobar+Islands+744211/@12.0277471,92.9991508,16.22z/data=!4m9!4m8!1m0!1m5!1m1!1s0x3088d36ea9916325:0xbdce4116db26504b!2m2!1d93.0024906!2d12.0265636!3e0"} target="_blank">
-              <motion.button 
-              whileHover={{ backgroundColor: "rgb(59, 130, 246)", color: "white" }}
-              whileTap={{scale: 0.9}}
-              className="text-blue-500 bg-transparent border-2 border-blue-500 rounded-md px-3 py-2"
+              <motion.button
+                whileHover={{ backgroundColor: "rgb(59, 130, 246)", color: "white" }}
+                whileTap={{ scale: 0.9 }}
+                className="text-blue-500 bg-transparent border-2 border-blue-500 rounded-md px-3 py-2"
               >
                 View in Google Maps
               </motion.button>
@@ -202,9 +207,9 @@ const page = () => {
 
               {/* Submit btn */}
               <motion.div className="">
-                <motion.button 
-                whileTap={{scale: 0.9}}
-                className="bg-blue-500 text-white px-4 py-2 rounded-md" type="submit"
+                <motion.button
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md" type="submit"
                 >
                   Submit
                 </motion.button>

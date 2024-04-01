@@ -33,7 +33,7 @@ const page = () => {
             <Image
               width={"300"}
               height={"300"}
-              priority
+              priority={true}
               src="/logo_white.png"
               alt="noimg"
             />
@@ -53,7 +53,7 @@ const page = () => {
             <Image
               width={"300"}
               height={"300"}
-              priority
+              priority={true}
               src="/travel.webp"
               alt="noimg"
             />

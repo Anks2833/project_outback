@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Footer from "../Components/Footer"
 import Page1_act from "../Components/Page1_act"
 import { Lato } from 'next/font/google';
+import Image from "next/image";
 
 const lato = Lato({
     subsets: ['latin'],
@@ -21,7 +22,15 @@ const page = () => {
             <div className="relative w-full h-screen sm:w-full sm:h-screen bg-zinc-100 text-zinc-100">
 
                 <div className="absolute top-0 z-[2] w-full h-screen sm:w-full sm:h-screen bg-zinc-900/65"></div>
-                <img className="w-full h-full object-cover" src="/activities.jpg" alt="" />
+                <div className="w-full h-full object-cover">
+                    <Image
+                        layout="fill"
+                        objectFit="cover"
+                        priority={true}
+                        src="/activities.jpg"
+                        alt="noimg" />
+
+                </div>
 
             </div>
 

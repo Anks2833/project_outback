@@ -4,6 +4,7 @@ import { Lato, Recursive, Roboto } from 'next/font/google';
 import Footer from "../Components/Footer"
 import Food from "../Components/Food";
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 
 const roboto = Roboto({
@@ -116,7 +117,14 @@ const page = () => {
 
       <motion.div className="relative w-full h-screen bg-zinc-100 text-zinc-100 overflow-hidden">
 
-        <img className="w-full h-full object-cover object-center brightness-50" src="/cafe.jpg" alt="" />
+        <div className="w-full h-full object-cover object-center brightness-50">
+          <Image
+            layout='fill'
+            objectFit='cover'
+            priority={true}
+            src="/cafe.jpg"
+            alt="noimg" />
+        </div>
 
       </motion.div>
 

@@ -13,6 +13,7 @@ const Act_card = () => {
             <div className="hidden sm:flex md:px-10 lg:px-32 my-20">
                 <div className="w-full text-black flex flex-col gap-6">
                     <h2
+                        className="w-full text-[3.5vw] sm:text-[3vw] font-extrabold text-[#53565A] border-b-[1px] border-b-zinc-500"
                     >
                         Try Scuba Dive
                     </h2>

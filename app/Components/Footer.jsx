@@ -4,7 +4,7 @@ import Link from "next/link"
 import { IoLogoFacebook } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io5";
-import { FaPhoneAlt } from "react-icons/fa";
+import { IoIosCall } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
 
 
@@ -67,44 +67,44 @@ const Footer = () => {
             &copy; {currentYear} <Link href="https://material-tailwind.com/">Outback Resort</Link>. All
             Rights Reserved.
           </div>
-          <div className="flex gap-2 text-blue-gray-900 sm:justify-center">
+          <div className="flex gap-3 text-blue-gray-900 sm:justify-center">
 
             {/* Fb */}
             <Link
               href={"https://www.facebook.com/outbackresorts"}
               target="_blank"
-              className="text-[#4267B2] hover:text-white bg-white hover:bg-[#4267B2] rounded-full border-2 border-[#4267B2] px-1 py-1 transition-all">
-              <IoLogoFacebook />
+              className="">
+              <IoLogoFacebook style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
             </Link>
 
             {/* Insta */}
             <Link
               href={"https://www.instagram.com/outbackresorts/"}
               target="_blank"
-              className="text-[#C13584] hover:text-white bg-white hover:bg-[#C13584] rounded-full border-2 border-[#C13584] px-1 py-1 transition-all">
-              <IoLogoInstagram />
+              className="">
+              <IoLogoInstagram style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
             </Link>
 
             {/* Wp */}
             <Link
               href={"https://api.whatsapp.com/send/?phone=%2B919531949235&text&type=phone_number&app_absent=0"}
               target="_blank"
-              className="text-[#16A34A] hover:text-white bg-white hover:bg-[#16A34A] rounded-full border-2 border-[#16A34A] px-1 py-1 transition-all">
-              <IoLogoWhatsapp />
+              className="">
+              <IoLogoWhatsapp style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
             </Link>
 
             {/* Call */}
             <Link
               href={""}
-              className="text-black hover:text-white bg-white hover:bg-black rounded-full border-2 border-black px-1 py-1 transition-all">
-              <FaPhoneAlt />
+              className="">
+              <IoIosCall style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
             </Link>
 
             {/* Mail */}
             <Link
               href={""}
-              className="text-red-600 hover:text-white bg-white hover:bg-red-600 rounded-full border-2 border-red-600 px-1 py-1 transition-all">
-              <IoMail />
+              className="">
+              <IoMail style={{width: "1.5vw", height: "1.5vw", color: "white"}} />
             </Link>
 
           </div>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Footer from "../Components/Footer";
 import { Lato } from 'next/font/google';
 import Link from "next/link";
+import Image from "next/image";
 
 const lato = Lato({
   subsets: ['latin'],
@@ -20,11 +21,15 @@ export default function About() {
 
       {/* Top section */}
       <div className="relative w-full h-screen">
-        <img
-          className="w-full h-full object-cover brightness-75"
-          src="pexels-pixabay.jpg"
-          alt="Image"
-        />
+        <div className="w-full h-full object-cover brightness-75">
+          <Image
+            layout="fill"
+            objectFit="cover"
+            priority={true}
+            src="/pexels-pixabay.jpg"
+            alt="noimg"
+          />
+        </div>
         <div className="absolute top-0 w-full h-screen bg-zinc-900/65"></div>
       </div>
 

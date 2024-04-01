@@ -32,7 +32,7 @@ const Navbar = () => {
         { href: "/contact", label: "CONTACT" },
     ]
 
-    const [clicked, setIsClicked] = useState(false)
+    const [clicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
         setIsClicked(!clicked);

@@ -13,6 +13,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { motion } from "framer-motion";
 import { Lato } from 'next/font/google';
+import Image from "next/image";
 
 const lato = Lato({
     subsets: ['latin'],
@@ -27,11 +28,15 @@ export default function About() {
     <>
       {/* Top section */}
       <div className="relative w-full h-screen">
-        <img
-          className="w-full h-full object-cover brightness-75"
-          src="Cafe-Saltwater.webp"
-          alt="Image"
+        <div className="w-full h-full object-cover brightness-75">
+        <Image
+          layout="fill"
+          objectFit="cover"
+          priority={true}
+          src="/Cafe-Saltwater.webp"
+          alt="noimg"
         />
+        </div>
         <div className="absolute top-0 w-full h-screen bg-zinc-900/65"></div>
       </div>
 

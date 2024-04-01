@@ -225,7 +225,7 @@ const page = () => {
 
         {/* Dish1 Image */}
         <div className="dish1 w-full h-[30vw] my:16 sm:my-24">
-          <img className="w-full h-full object-cover object-center" src="/dish1.webp" alt="" />
+          <img className="w-full h-full object-cover object-center" src="/dish1.jpg" alt="" />
         </div>
 
         {/* Second part */}
@@ -270,7 +270,7 @@ const page = () => {
 
         {/* Dish2 Image */}
         <div className="dish1 w-full h-[30vw] my:16 sm:my-24">
-          <img className="w-full h-full object-cover object-center" src="/dish2.webp" alt="" />
+          <img className="w-full h-full object-cover object-center" src="/dish2.jpg" alt="" />
         </div>
 
         {/* Third part */}
@@ -315,7 +315,7 @@ const page = () => {
 
         {/* Dish3 Image */}
         <div className="dish1 w-full h-[30vw] my:16 sm:my-24">
-          <img className="w-full h-full object-cover object-center" src="/dish3.webp" alt="" />
+          <img className="w-full h-full object-cover object-center" src="/dish3.jpg" alt="" />
         </div>
 
         {/* BEVERAGE */}

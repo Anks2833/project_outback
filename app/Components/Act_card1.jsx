@@ -57,7 +57,7 @@ const Act_card1 = () => {
             <div className="w-full mt-10 py-8 text-black flex flex-col items-center border-b-[1px] border-zinc-200 sm:hidden">
 
                 {/* The heading */}
-                <h1 className="w-[70vw] text-[8vw] text-center font-extrabold text-[#53565A]">Kayak</h1>
+                <h1 className="w-[70vw] text-[8vw] text-center font-extrabold underline text-[#53565A]">Kayak</h1>
 
                 {/* THe Image */}
                 <div className="w-full mt-6">

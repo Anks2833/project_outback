@@ -56,7 +56,7 @@ const Act_card = () => {
             <div className="w-full mt-10 py-8 text-black flex flex-col items-center border-b-[1px] border-zinc-200 sm:hidden">
 
                 {/* The heading */}
-                <h1 className="w-[70vw] text-[8vw] text-center font-extrabold text-[#53565A]">Try Scuba Dive</h1>
+                <h1 className="w-[70vw] text-[8vw] text-center font-extrabold underline text-[#53565A]">Try Scuba Dive</h1>
 
                 {/* THe Image */}
                 <div className="w-full mt-6">
@@ -75,9 +75,15 @@ const Act_card = () => {
                 </div>
 
                 {/* The book now button */}
-                <div className="">
-                    <button className="mt-5 mb-16 px-6 py-3 bg-emerald-500 rounded-lg text-white">Book Now</button>
-                </div>
+                <Link href={"https://live.ipms247.com/booking/book-rooms-outbackresorts"} target='_blank'>
+                    <motion.button
+                        whileHover={{ backgroundColor: "rgb(5 150 105)", color: "white" }}
+                        whileTap={{ scale: 0.9 }}
+                        className="bg-transparent border-2 border-emerald-600 text-emerald-600 p-5 rounded-lg font-semibold mt-5 mb-16 px-6 py-3"
+                    >
+                        Book now
+                    </motion.button>
+                </Link>
             </div>
 
         </div>

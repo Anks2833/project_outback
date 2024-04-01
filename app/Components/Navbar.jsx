@@ -10,6 +10,7 @@ import { FaHouseUser } from "react-icons/fa";
 import { FaSwimmer } from "react-icons/fa";
 import { IoRestaurant } from "react-icons/io5";
 import { RiContactsFill } from "react-icons/ri";
+import { MdCancel } from "react-icons/md";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -59,7 +60,7 @@ const Navbar = () => {
                 </motion.div>
 
                 {/* The phone screen Navbar */}
-                <div className={`absolute top-0 left-0 z-[-1] flex flex-col w-full h-screen py-24 bg-[#006868] sm:hidden ${clicked ? "flex" : "hidden"}`}>
+                <div className={`absolute top-0 left-0 z-[-1] flex flex-col w-full h-screen py-24 bg-emerald-800 sm:hidden ${clicked ? "translate-y-[0%] transition-all" : "translate-y-[-100%] transition-all"}`}>
                     <div className={`flex items-center gap-3 border-b-[1px] border-b-zinc-100 px-6 py-2 ${lato.className} tracking-tighter`}>
                         <FaHome style={{ width: "6vw", height: "6vw" }} />
                         <Link href="/" className="text-[6vw]">HOME</Link>
@@ -98,8 +99,13 @@ const Navbar = () => {
 
 
                 {/* The navigator on phone screen */}
-                <span onClick={() => { handleClick() }} className='sm:hidden'>
-                    <IoMenuOutline style={{ width: "8vw", height: "8vw" }} />
+                <span onClick={() => { handleClick() }} className={`sm:hidden ${clicked === true ? "hidden opacity-0 transition-all" : "opacity-100 transition-all"}`}>
+                    <IoMenuOutline style={{ width: "10vw", height: "10vw", backgroundColor: "white", color: "black", borderRadius: "100%", padding: "1vw" }} />
+                </span>
+
+                {/* The navigator cross on phone screen */}
+                <span onClick={() => { handleClick() }} className={`sm:hidden ${clicked === false ? "hidden opacity-0 transition-all" : "opacity-100 transition-all"}`}>
+                    <MdCancel style={{ width: "10vw", height: "10vw" }} />
                 </span>
 
                 {/* The links */}

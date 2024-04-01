@@ -28,7 +28,7 @@ const page = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
-            className='absolute top-[20%] w-[15vw] h-[20vh] md:w-[20vw] md:h-[15vh] lg:w-[15vw] lg:h-[20vh] hidden md:flex lg:flex' src="logo_white.png" alt="noimg"
+            className='absolute top-[20%] w-[15vw] h-[20vh] md:w-[30vw] md:h-[15vh] lg:w-[15vw] lg:h-[20vh] hidden md:flex lg:flex' src="logo_white.png" alt="noimg"
           />
 
           <Booking />
@@ -38,7 +38,7 @@ const page = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
             viewport={{ once: true }}
-            className='absolute bottom-[2%] w-[15vw] h-[15vw] md:w-[10vw] md:h-[10vh] lg:w-[5vw] lg:h-[10vh]' src="travel.webp" alt="noimg"
+            className='absolute bottom-[2%] w-[15vw] h-[15vw] md:w-[15vw] md:h-[10vh] lg:w-[5vw] lg:h-[10vh]' src="travel.webp" alt="noimg"
           />
 
         </div>
@@ -71,7 +71,7 @@ const page = () => {
         >
           <div className='w-full flex px-8 sm:px-0'>
             <h2
-              className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] sm:border-b-[1px] sm:border-b-zinc-500"
+              className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
               initial={{ y: "30%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -114,7 +114,7 @@ const page = () => {
       <div className='w-full relative flex items-center gap-3 overflow-hidden bg-[#FAF8F3] text-center sm:text-left'>
 
         <div className='w-full'>
-          <h1 className='w-full absolute top-0 left-0 z-[1] px-12 text-[#4c4e50] text-[8vw] sm:text-[6vw] font-bold'>Our Gallery</h1>
+          <h1 className='w-full absolute top-0 left-0 z-[1] px-12 text-[#4c4e50] text-[8vw] underline sm:no-underline sm:text-[6vw] font-bold'>Our Gallery</h1>
         </div>
 
         <motion.div
@@ -197,7 +197,7 @@ const page = () => {
 
           <div className='w-full flex px-8 sm:px-0'>
             <h2
-              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] sm:border-b-[1px] sm:border-b-zinc-500"
+              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
               initial={{ y: "30%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -271,7 +271,7 @@ const page = () => {
         >
           <div className='w-full flex px-8 sm:px-0'>
             <h2
-              className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] sm:border-b-[1px] sm:border-b-zinc-500"
+              className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
               initial={{ y: "30%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -326,7 +326,7 @@ const page = () => {
           transition={{ delay: 0.2 }}
         >
           <h2
-            className="w-full text-[6vw] sm:text-[2.5vw] font-extrabold text-[#53565A] border-b-[1px] border-b-zinc-500"
+            className="w-full text-[6vw] sm:text-[2.5vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
             initial={{ y: "50%", opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -337,86 +337,92 @@ const page = () => {
         </motion.div>
 
         <motion.div className="grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-3">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
-          >
-            <div className="h-96 w-96">
-              <img
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                src="./lastSection/pexels-kevin.jpg"
-                alt="noimg"
-              />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <h1 className="font-dmserif text-3xl font-bold text-white">
-                Try Scuba Dive
-              </h1>
-              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                This is a gentle experience designed for swimmers and non
-                swimmers alike. The try dive consists of briefing, shallow water
-                scuba training and 30 minute dive.
-              </p>
+          <Link href={"/activities"}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
+            >
+              <div className="h-96 w-96">
+                <img
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="./lastSection/pexels-kevin.jpg"
+                  alt="noimg"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                <h1 className="font-dmserif text-3xl font-bold text-white">
+                  Try Scuba Dive
+                </h1>
+                <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  This is a gentle experience designed for swimmers and non
+                  swimmers alike. The try dive consists of briefing, shallow water
+                  scuba training and 30 minute dive.
+                </p>
 
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </Link>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6 }}
-            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
-          >
-            <div className="h-96 w-96">
-              <img
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                src="./lastSection/pexels-john.jpg"
-                alt="noimg"
-              />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-            <div className="absolute inset-0 flex translate-y-[55%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <h1 className="font-dmserif text-3xl font-bold text-white">
-                Open Water Course
-              </h1>
-              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                This course enables you to get a diving license, permitting
-                dives anywhere in the world to a maximum depth of 18 meters.
-              </p>
+          <Link href={"/activities"}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
+            >
+              <div className="h-96 w-96">
+                <img
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="./lastSection/pexels-john.jpg"
+                  alt="noimg"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div className="absolute inset-0 flex translate-y-[55%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                <h1 className="font-dmserif text-3xl font-bold text-white">
+                  Open Water Course
+                </h1>
+                <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  This course enables you to get a diving license, permitting
+                  dives anywhere in the world to a maximum depth of 18 meters.
+                </p>
 
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </Link>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8 }}
-            className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
-          >
-            <div className="h-96 w-96">
-              <img
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                src="./lastSection/pexels-uriel.jpg"
-                alt="noimg"
-              />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <h1 className="font-dmserif text-3xl font-bold text-white">Kayak</h1>
-              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                One of the most unique tours offered in Andaman is on a kayak.
-                Led by Tanaz Noble, one of the most famous kayak leaders in
-                Andaman.
-              </p>
+          <Link href={"/activities"}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8 }}
+              className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg"
+            >
+              <div className="h-96 w-96">
+                <img
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="./lastSection/pexels-uriel.jpg"
+                  alt="noimg"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+              <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                <h1 className="font-dmserif text-3xl font-bold text-white">Kayak</h1>
+                <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  One of the most unique tours offered in Andaman is on a kayak.
+                  Led by Tanaz Noble, one of the most famous kayak leaders in
+                  Andaman.
+                </p>
 
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </Link>
         </motion.div>
       </motion.div>
 

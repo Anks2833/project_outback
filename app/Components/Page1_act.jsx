@@ -71,7 +71,7 @@ const Page1_act = () => {
 
                 <div className="w-full flex flex-col items-center py-6 gap-6">
 
-                    <h1 className="text-[8vw] text-center font-extrabold text-[#53565A]">Open Water Course</h1>
+                    <h1 className="text-[8vw] text-center font-extrabold underline text-[#53565A]">Open Water Course</h1>
 
                     <div className="">
                         <img className="w-full h-full object-cover object-center" src="/img2.jpg" alt="" />

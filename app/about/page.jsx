@@ -58,7 +58,7 @@ export default function About() {
         >
           <div className='w-full flex px-8 sm:px-0'>
             <h2
-              className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] sm:border-b-[1px] sm:border-b-zinc-500"
+              className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
               initial={{ y: "30%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function About() {
 
           {/* Image on mobile */}
           <div className="w-full flex sm:hidden">
-            <img src="pexels-aviv.jpg" alt="noimg" />
+            <img src="img4.jpg" alt="noimg" />
           </div>
 
           <div className='w-full flex gap-10'>
@@ -90,7 +90,7 @@ export default function About() {
             </div>
 
             <div className="w-1/2 h-[55vh] hidden sm:flex">
-              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full object-cover origin-center' src="pexels-aviv.jpg" alt="noimg" />
+              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full object-cover origin-center' src="img4.jpg" alt="noimg" />
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function About() {
       <div className='w-full relative flex items-center gap-3 overflow-hidden bg-[#FAF8F3] text-center sm:text-left'>
 
         <div className='w-full'>
-          <h1 className='w-full absolute top-0 left-0 z-[1] px-12 text-[#4c4e50] text-[8vw] sm:text-[6vw] font-bold'>Our Gallery</h1>
+          <h1 className='w-full absolute top-0 left-0 z-[1] px-12 text-[#4c4e50] text-[8vw] underline sm:no-underline sm:text-[6vw] font-bold'>Our Gallery</h1>
         </div>
 
         <motion.div
@@ -184,7 +184,7 @@ export default function About() {
 
           <div className='w-full flex px-8 sm:px-0'>
             <h2
-              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] sm:border-b-[1px] sm:border-b-zinc-500"
+              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
               initial={{ y: "30%", opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}

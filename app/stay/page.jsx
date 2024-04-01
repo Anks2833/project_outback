@@ -106,8 +106,8 @@ export default function About() {
       </div>
 
 
-      {/* The Swiper */}
-      <div className="w-full h-[50vh] bg-[#FAF8F3] select-none">
+      {/* The Swiper for desktop */}
+      <div className="w-full h-[50vh] bg-[#FAF8F3] select-none hidden sm:flex">
         <Swiper
           slidesPerView={'3'}
           spaceBetween={20}
@@ -124,6 +124,27 @@ export default function About() {
           <SwiperSlide><img className="w-[40vw] h-[20vw]" src="img1.jpg" alt="noimg" /></SwiperSlide>
           <SwiperSlide><img className="w-[40vw] h-[20vw]" src="out11.jpg" alt="noimg" /></SwiperSlide>
           <SwiperSlide><img className="w-[40vw] h-[20vw]" src="out-4.webp" alt="noimg" /></SwiperSlide>
+        </Swiper>
+      </div>
+
+      {/* The Swiper for phone */}
+      <div className="w-full h-[50vh] bg-[#FAF8F3] select-none sm:hidden">
+        <Swiper
+          slidesPerView={'2'}
+          spaceBetween={10}
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper">
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out1.webp" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out7.jpg" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out5.webp" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out8.jpg" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out9.webp" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out6.webp" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out10.jpg" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="img1.jpg" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out11.jpg" alt="noimg" /></SwiperSlide>
+          <SwiperSlide><img className="w-[60vw] h-[40vw]" src="out-4.webp" alt="noimg" /></SwiperSlide>
         </Swiper>
       </div>
 

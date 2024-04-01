@@ -129,7 +129,7 @@ const Footer = () => {
                 <Link
                   href={"https://astratechz.com/"}
                   target="_blank"
-                  className="font-extrabold text-white text-[1.2vw]">
+                  className="font-extrabold text-white text-[3.5vw] sm:text-[1.2vw]">
                   A.T.Z
                 </Link>
               </div>

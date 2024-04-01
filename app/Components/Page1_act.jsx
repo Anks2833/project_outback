@@ -12,7 +12,7 @@ const Page1_act = () => {
         <div className="w-full min-h-screen bg-[#FAF8F3] sm:px-5 pt-10 sm:pt-16 flex flex-col items-center">
 
             <div className="flex justify-center">
-                <h1 className="sm:w-full w-[90vw] text-emerald-700 text-xs underline sm:no-underline text-center sm:text-xl sm:border-b-[1px] sm:border-b-emerald-700">Activities are an add on option, ahead of room bookings. Please click 'Book Now' to proceed.</h1>
+                <h1 className="sm:w-full w-[90vw] text-emerald-700 text-xs underline sm:no-underline text-center sm:text-xl sm:border-b-[1px] sm:border-b-emerald-700">Activities are an add on option, ahead of room bookings. Please click (Book Now) to proceed.</h1>
             </div>
 
             <Act_card />

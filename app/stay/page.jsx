@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import Footer from "../Components/Footer";
 import React, { useRef, useState } from 'react';
@@ -12,7 +12,6 @@ import 'swiper/css/navigation';
 
 import { Navigation } from 'swiper/modules';
 import { motion } from "framer-motion";
-import LocomotiveScroll from 'locomotive-scroll';
 import { Lato } from 'next/font/google';
 
 const lato = Lato({
@@ -23,7 +22,6 @@ const lato = Lato({
 
 export default function About() {
 
-  const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <>

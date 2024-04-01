@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 const Food = ({name, price, info}) => {
     return (

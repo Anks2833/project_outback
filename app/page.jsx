@@ -1,18 +1,15 @@
-"use client"
+'use client';
 
 
 import Footer from './Components/Footer';
 import Booking from './Components/Booking';
 import Reviews from './Components/Reviews';
 import { motion } from 'framer-motion';
-import LocomotiveScroll from 'locomotive-scroll';
 import Link from 'next/link';
 import Image from 'next/image';
 
 
 const page = () => {
-
-  const locomotiveScroll = new LocomotiveScroll();
 
   return (
 

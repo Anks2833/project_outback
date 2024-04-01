@@ -1,9 +1,8 @@
-"use client"
+'use client';
 
 import { motion } from "framer-motion";
 import Footer from "../Components/Footer"
 import Page1_act from "../Components/Page1_act"
-import LocomotiveScroll from 'locomotive-scroll';
 import { Lato } from 'next/font/google';
 
 const lato = Lato({
@@ -14,7 +13,6 @@ const lato = Lato({
 
 const page = () => {
 
-    const locomotiveScroll = new LocomotiveScroll();
 
     return (
 

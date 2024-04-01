@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { motion } from 'framer-motion';
 import { Roboto } from 'next/font/google';

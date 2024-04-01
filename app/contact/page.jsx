@@ -1,9 +1,8 @@
-"use client";
+'use client';
 
 import { motion } from "framer-motion";
 import Footer from "../Components/Footer";
 import { Lato } from 'next/font/google';
-import LocomotiveScroll from 'locomotive-scroll';
 import Link from "next/link";
 
 const lato = Lato({
@@ -15,7 +14,6 @@ const lato = Lato({
 const page = () => {
 
 
-  const locomotiveScroll = new LocomotiveScroll();
 
   return (
 
@@ -52,7 +50,7 @@ const page = () => {
             width="600"
             height="450"
             style={{ border: 0 }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

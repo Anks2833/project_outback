@@ -1,3 +1,6 @@
+'use client';
+
+
 const Review = ({name, date, para, image}) => {
   return (
 

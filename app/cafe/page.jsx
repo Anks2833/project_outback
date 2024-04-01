@@ -1,10 +1,9 @@
-"use client"
+'use client';
 
 import { Lato, Recursive, Roboto } from 'next/font/google';
 import Footer from "../Components/Footer"
 import Food from "../Components/Food";
 import { motion } from 'framer-motion';
-import LocomotiveScroll from 'locomotive-scroll';
 
 
 const roboto = Roboto({
@@ -24,8 +23,6 @@ const recursive = Recursive({
 
 const page = () => {
 
-
-  const locomotiveScroll = new LocomotiveScroll();
 
   const foodData = [
     { id: "1", name: "ALL DAY BREAKFAST", price: "₹450", info: "3 eggs any style, sausages, grilled tomato, mushrooms, mash potatoes" },

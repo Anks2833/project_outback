@@ -1,9 +1,8 @@
-"use client"
+'use client';
 
 
 import { motion } from "framer-motion";
 import Footer from "../Components/Footer";
-import LocomotiveScroll from 'locomotive-scroll';
 import { Lato } from 'next/font/google';
 import Link from "next/link";
 
@@ -15,7 +14,6 @@ const lato = Lato({
 
 export default function About() {
 
-  const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <>
@@ -51,18 +49,11 @@ export default function About() {
         className="flex sm:flex md:px-10 lg:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left"
       >
         <div
-          initial={{ y: "50%", opacity: 0 }}
-          whileInView={{ y: "0", opacity: 1 }}
-          viewport={{ once: true }}
           className="w-full text-black flex flex-col gap-6"
         >
           <div className='w-full flex px-8 sm:px-0'>
             <h2
               className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
-              initial={{ y: "30%", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
             >
               Our Story
             </h2>
@@ -185,10 +176,6 @@ export default function About() {
           <div className='w-full flex px-8 sm:px-0'>
             <h2
               className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
-              initial={{ y: "30%", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
             >
               400,000 Recycled Installations
             </h2>

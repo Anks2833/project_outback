@@ -51,10 +51,18 @@ export default function About() {
         className="flex sm:flex md:px-10 lg:px-32 py-20 bg-[#FAF8F3] text-center sm:text-left"
       >
         <div
+          initial={{ y: "50%", opacity: 0 }}
+          whileInView={{ y: "0", opacity: 1 }}
+          viewport={{ once: true }}
           className="w-full text-black flex flex-col gap-6"
         >
           <div className='w-full flex px-8 sm:px-0'>
             <h2
+              className="w-full text-[6vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
+              initial={{ y: "30%", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
             >
               Our Story
             </h2>
@@ -62,7 +70,7 @@ export default function About() {
 
           {/* Image on mobile */}
           <div className="w-full flex sm:hidden">
-            <img src="img4.jpg" alt="noimg" />
+            <img src="pexels-aviv.jpg" alt="noimg" />
           </div>
 
           <div className='w-full flex gap-10'>
@@ -82,7 +90,7 @@ export default function About() {
             </div>
 
             <div className="w-1/2 h-[55vh] hidden sm:flex">
-              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full object-cover origin-center' src="img4.jpg" alt="noimg" />
+              <img className='md:w-full md:h-[40vh] lg:w-full lg:h-full object-cover origin-center' src="pexels-aviv.jpg" alt="noimg" />
             </div>
           </div>
         </div>
@@ -176,6 +184,11 @@ export default function About() {
 
           <div className='w-full flex px-8 sm:px-0'>
             <h2
+              className="w-full text-[5vw] sm:text-[3vw] font-extrabold text-[#53565A] underline sm:no-underline sm:border-b-[1px] sm:border-b-zinc-500"
+              initial={{ y: "30%", opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ ease: [0.16, 1, 0.3, 1], duration: 0.8 }}
             >
               400,000 Recycled Installations
             </h2>
